@@ -482,7 +482,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'cd_dispatch:client:panic', -- event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
             id = 'escort',
@@ -512,6 +512,30 @@ Config.JobInteractions = {
                     shouldClose = false
                 }
             }
+        }
+    },
+    ["turbotaxi"] = {
+        {
+            id = 'togglemeter',
+            title = 'Show/Hide Meter',
+            icon = 'eye-slash',
+            type = 'client',
+            event = 'turbotaxi:client:toggleMeter',
+            shouldClose = false
+        }, {
+            id = 'togglemouse',
+            title = 'Start/Stop Meter',
+            icon = 'hourglass-start',
+            type = 'client',
+            event = 'turbotaxi:client:enableMeter',
+            shouldClose = true
+        }, {
+            id = 'npc_mission',
+            title = 'NPC Mission',
+            icon = 'taxi',
+            type = 'client',
+            event = 'turbotaxi:client:DoTaxiNpc',
+            shouldClose = true
         }
     },
     ["taxi"] = {
@@ -571,7 +595,7 @@ Config.JobInteractions = {
             title = 'Emergency button',
             icon = 'bell',
             type = 'client',
-            event = 'police:client:SendPoliceEmergencyAlert',
+            event = 'cd_dispatch:client:panic',--event = 'police:client:SendPoliceEmergencyAlert',
             shouldClose = true
         }, {
             id = 'checkvehstatus',
@@ -633,6 +657,13 @@ Config.JobInteractions = {
                     icon = 'user-lock',
                     type = 'client',
                     event = 'police:client:JailPlayer',
+                    shouldClose = true
+                }, {
+                    id = 'checkvin',
+                    title = 'Check Vin Number',
+                    icon = 'barcode',
+                    type = 'client',
+                    event = 'qb-vinscratch:searchvinnum',
                     shouldClose = true
                 }
             }
@@ -701,6 +732,132 @@ Config.JobInteractions = {
             icon = 'hotdog',
             type = 'client',
             event = 'qb-hotdogjob:client:ToggleSell',
+            shouldClose = true
+        }
+    },
+    ["mechanic"] = {
+        {
+            id = 'checkvehstatus',
+            title = 'Check Vehicle Status',
+            icon = 'info-circle',
+            type = 'client',
+            event = 'advanced_vehicles:showStatusUI',
+            shouldClose = true
+        },{
+            id = 'repair',
+            title = 'Vehicle Repair',
+            icon = 'bell',
+            type = 'client',
+            event = 'RepairVehicle()',
+            shouldClose = true
+        }, {
+            id = 'cleanvehilce',
+            title = 'Clean Vehicle',
+            icon = 'key',
+            type = 'client',
+            event = 'qb-vehiclefailure:client:CleanVehicle',
+            shouldClose = true
+        }, 
+    },
+    ["hektic"] = {
+        {
+            id = 'checkvehstatus',
+            title = 'Check Vehicle Status',
+            icon = 'info-circle',
+            type = 'client',
+            event = 'advanced_vehicles:showStatusUI',
+            shouldClose = true
+        },{
+            id = 'repair',
+            title = 'Vehicle Repair',
+            icon = 'bell',
+            type = 'client',
+            event = 'RepairVehicle()',
+            shouldClose = true
+        }, {
+            id = 'cleanvehilce',
+            title = 'Clean Vehicle',
+            icon = 'key',
+            type = 'client',
+            event = 'qb-vehiclefailure:client:CleanVehicle',
+            shouldClose = true
+        }, 
+    },
+    ["bennys"] = {
+        {
+            id = 'checkvehstatus',
+            title = 'Check Vehicle Status',
+            icon = 'info-circle',
+            type = 'client',
+            event = 'advanced_vehicles:showStatusUI',
+            shouldClose = true
+        },{
+            id = 'repair',
+            title = 'Repair Vehicle',
+            icon = 'bell',
+            type = 'client',
+            event = 'qb-custom:bodyrepair',
+            shouldClose = true
+        }, {
+            id = 'cleanvehicle',
+            title = 'Clean Vehicle',
+            icon = 'key',
+            type = 'client',
+            event = 'qb-vehiclefailure:client:CleanVehicle',
+            shouldClose = true
+        }, 
+    },
+    ["redline"] = {
+        {
+            id = 'checkvehstatus',
+            title = 'Check Vehicle Status',
+            icon = 'info-circle',
+            type = 'client',
+            event = 'advanced_vehicles:showStatusUI',
+            shouldClose = true
+        },{
+            id = 'repair',
+            title = 'Vehicle Repair',
+            icon = 'bell',
+            type = 'client',
+            event = 'qb-custom:bodyrepair',
+            shouldClose = true
+        }, {
+            id = 'cleanvehilce',
+            title = 'Clean Vehicle',
+            icon = 'key',
+            type = 'client',
+            event = 'qb-vehiclefailure:client:CleanVehicle',
+            shouldClose = true
+        }, 
+    },
+    ["reporter"] = {
+        {
+            id = 'newsmic',
+            title = 'News Mic',
+            icon = 'microphone',
+            type = 'client',
+            event = 'Mic:ToggleMic',
+            shouldClose = true
+        },
+        {
+            id = 'newscam',
+            title = 'News Camera',
+            icon = 'video',
+            type = 'client',
+            event = 'Cam:ToggleCam',
+            shouldClose = true
+        }
+    },
+
+    -- Realestate 
+    ["realestate"] = {
+        {
+            id = 'housemenu',
+            title = 'List of houses',
+            icon = 'laptop-house',
+            type = 'client',
+            event = 'qb-realestate:client:OpenHouseListMenu',
             shouldClose = true
         }
     }
