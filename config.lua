@@ -855,7 +855,7 @@ Config.JobInteractions = {
         {
             id = 'housemenu',
             title = 'List of houses',
-            icon = 'laptop-house',
+            icon = 'house-laptop',
             type = 'client',
             event = 'qb-realestate:client:OpenHouseListMenu',
             shouldClose = true
